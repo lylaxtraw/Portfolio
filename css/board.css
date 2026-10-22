@@ -15,18 +15,14 @@
   z-index: 1;
 }
 
-/* Medium screens: the board condenses to 6 columns but keeps the same
-   horizontal arrangement — nothing stacks vertically yet. */
+/* Screens below desktop condense to 6 columns and keep the same horizontal
+   arrangement. */
 @media (max-width: 1100px) {
   .board { grid-template-columns: repeat(6, 1fr); }
 }
 
-/* Phones: 2 columns (socials pair up, sections go full width).
-   Each section file sets its own placement + order for this tier. */
-@media (max-width: 640px) {
-  .board { grid-template-columns: repeat(2, 1fr); grid-template-rows: none; }
-}
-
-@media (max-width: 560px) {
-  .board { grid-template-columns: 1fr; }
+/* Keep the six-column section layout on narrow screens; the page scrolls
+   horizontally instead of stacking sections. */
+@media (max-width: 520px) {
+  .board { min-width: 800px; }
 }

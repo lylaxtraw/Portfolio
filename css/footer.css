@@ -20,7 +20,3 @@
 .footer a { color: var(--ink-dim); }
 .footer a:hover { color: var(--ink); }
 .footer .future-row { opacity: 0.55; }
-
-@media (max-width: 640px) {
-  .footer { grid-column: 1 / -1; grid-row: auto; order: 10; }
-}

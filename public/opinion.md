@@ -1,0 +1,32 @@
+# Opiniones: <id> :: <texto>. El id enlaza con social_link.md. Líneas con # se ignoran.
+
+close :: Perseverante, resiliente, positiva, leal, genuina
+maleny :: Empática, resiliente, amable, divertida, honesta
+cesar :: Amable, optimista, empática, amistosa, alegre
+arturo :: Fiel, amigable, trabajadora, romántica, creativa
+toyopfp :: Excelente, extraña y divertida persona
+moon :: Espontánea, generosa, detallista, servicial, auténtica
+raxenn :: Inteligente, amistosa, cringe, justa, empática
+camila :: Callada, tierna, tímida, chistosa, alta
+lizbeth :: Inteligente, amable, callada, interesante, cariñosa
+alison :: Graciosa, diferente, inteligente, amistosa, adaptable
+eli :: Graciosa, atenta, divertida, amable, extrovertida
+dannapfp :: Tranquila, agradable, analítica y divertida
+alipfp :: Divertida, sociable, culta, lista, única
+marpfp :: Graciosa, inteligente, amistosa, comprensiva, increíble
+sergio :: Inteligente, geek, amiguero, optimista, freaky
+sara :: Consejera, optimista, amable, empática, amigable
+montanopfp :: Persona con ganas de aprender
+hafidpfp :: Virgo, inteligente, despistada, astuta, divertida
+nicolepfp :: Está muy loca la chica
+guillermopfp :: Salva portera vendedora de chucherías
+angelpfp :: Te gustan locas, ocupas psicóloga
+frankpfp :: SLyla, Antiviral, Ligadora, Victoriosa, Anormal
+jesuspfp :: Joker, tercermundista, comerciante, emo, nalgón
+lizpfp :: Loca, esquizofrénica, inteligente, impulsiva, determinada
+nazipfp :: Si hablas, todo es caos
+alanpfp :: Que buen rifle te cargas
+ceratipfp :: Gym Bro super mega cachonda
+lulupfp :: Perseverante, equilibrada, simpática, mamada, educada
+henry :: Frankenstein, pechugona, buki, peluda, amigable
+javi :: Dr Pepper, uhhhhh, no sé

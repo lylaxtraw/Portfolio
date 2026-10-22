@@ -63,12 +63,7 @@
   .intro { grid-column: 1 / -1; grid-row: 1; }
 }
 
-/* Phones */
-@media (max-width: 640px) {
-  .intro { grid-column: 1 / -1; grid-row: auto; order: -2; }
-}
-
-@media (max-width: 560px) {
+@media (max-width: 420px) {
   .intro { grid-template-columns: 1fr; text-align: center; justify-items: center; }
   .intro .bio { max-width: none; }
 }

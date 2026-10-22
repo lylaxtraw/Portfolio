@@ -1,7 +1,6 @@
 /* ============================================================
    opinions.css — Rows 5-6, cols 8-10: Opiniones
-   A scrollable feed: every opinion keeps its author's picture
-   and a link to their social media.
+   One opinion per carousel slide, with picture and social link.
    ============================================================ */
 
 .panel-opinions {
@@ -14,11 +13,7 @@
   .panel-opinions { grid-column: 5 / -1; }
 }
 
-@media (max-width: 640px) {
-  .panel-opinions { grid-column: 1 / -1; grid-row: auto; order: 7; }
-}
-
-/* The feed itself */
+/* Opinion slide */
 .opinions-list { gap: 0; }
 
 .opinion {
@@ -58,4 +53,17 @@
 .opinion-who:hover {
   color: var(--accent);
   border-bottom-color: var(--accent);
+}
+
+.opinion-submit {
+  width: 100%;
+  margin-top: auto;
+  padding: 9px 12px;
+  border: 1px dashed color-mix(in srgb, var(--accent) 55%, var(--line));
+  border-radius: 9px;
+  color: var(--accent);
+  font-family: var(--f3);
+  font-size: var(--s3);
+  opacity: 0.7;
+  cursor: not-allowed;
 }

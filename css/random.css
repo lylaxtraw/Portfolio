@@ -12,9 +12,6 @@
   .panel-random { grid-column: 5 / -1; }
 }
 
-@media (max-width: 640px) {
-  .panel-random { grid-column: 1 / -1; grid-row: auto; order: 9; }
-}
 
 /* Dice + rotating fact */
 .dice-btn {
@@ -32,12 +29,3 @@
   background: color-mix(in srgb, var(--accent) 12%, transparent);
   transform: translateY(-1px);
 }
-
-.random-fact {
-  font-size: 0.9rem;
-  color: var(--ink-dim);
-  font-style: italic;
-  min-height: 3.2em;
-  transition: opacity 0.3s ease;
-}
-.random-fact.fading { opacity: 0; }

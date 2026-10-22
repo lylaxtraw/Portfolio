@@ -61,11 +61,6 @@
   .social-cell.linkedin  { grid-column: 6; }
 }
 
-/* Phones: auto-place 2-up, right after the intro */
-@media (max-width: 640px) {
-  .social-cell { grid-column: auto; grid-row: auto; order: -1; }
-}
-
-@media (max-width: 560px) {
+@media (max-width: 420px) {
   .social-cell { flex-direction: row; padding: 12px 16px; }
 }

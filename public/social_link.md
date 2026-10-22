@@ -1,0 +1,32 @@
+# Redes: <id> :: <quién> :: <enlace> :: <foto en img/pfp/>. Líneas con # se ignoran.
+
+close :: C. Canvas :: https://www.instagram.com/fxck_matus/ :: close.jpeg
+maleny :: V. Maleny :: https://www.instagram.com/tweeks_coffee_/ :: maleny.jpeg
+cesar :: N. César :: https://www.instagram.com/cessssarl_/ :: cesar.jpeg
+arturo :: M. Arturo :: https://www.instagram.com/montero.luisarturo/ :: arturo.jpeg
+toyopfp :: T. Jordan :: https://www.instagram.com/toyordan_/ :: toyopfp.jpeg
+moon :: Y. Carett :: https://www.instagram.com/moonxjstars/ :: moon.jpeg
+raxenn :: S. Raxenn :: https://www.instagram.com/ssantiagojoyar/ :: raxenn.jpeg
+camila :: Q. Camila :: https://www.instagram.com/cami_qr06/ :: camila.jpeg
+lizbeth :: G. Lizbeth :: https://www.instagram.com/liz.gmz5/ :: lizbeth.jpeg
+alison :: G. Alison :: https://www.instagram.com/aliisonn.gv/ :: alison.jpeg
+eli :: B. Eli :: https://www.instagram.com/becks.x__/ :: eli.jpeg
+dannapfp :: D. Anna :: https://www.instagram.com/dannanajeramorales/ :: dannapfp.jpeg
+alipfp :: A. Tejada :: https://www.instagram.com/ali_tejeda/ :: alipfp.jpeg
+marpfp :: M. Ana :: https://www.instagram.com/contrerasmariana_013/ :: marpfp.jpeg
+sergio :: P. Sergio :: https://www.instagram.com/sercchio_am/ :: sergio.jpeg
+sara :: N. Sara :: https://www.instagram.com/sisoysaraan/ :: sara.jpeg
+montanopfp :: L. Montano :: https://www.instagram.com/lmontano10/ :: montanopfp.jpeg
+hafidpfp :: H. Molina :: https://www.instagram.com/hafo.xd/ :: hafidpfp.jpeg
+nicolepfp :: A. Nicole :: https://www.instagram.com/nicoco_bruh/ :: nicolepfp.jpeg
+guillermopfp :: G. Guillermo :: https://www.instagram.com/memo_abad.25/ :: guillermopfp.jpeg
+angelpfp :: A. Eunice :: https://www.instagram.com/angelorvra/ :: angelpfp.jpeg
+frankpfp :: F. Asael :: https://www.instagram.com/frank_kanashii/ :: frankpfp.jpeg
+jesuspfp :: J. Yañez :: https://www.instagram.com/jesus_yan_24/ :: jesuspfp.jpeg
+lizpfp :: L. Beth :: https://www.instagram.com/lizdominguez06/ :: lizpfp.jpeg
+nazipfp :: A. Nazario :: https://www.instagram.com/hidronazi_hf/ :: nazipfp.jpeg
+alanpfp :: A. Sanchez :: https://www.instagram.com/who_is__al/ :: alanpfp.jpeg
+ceratipfp :: H. Cerati :: https://www.instagram.com/ymishwuuh/ :: ceratipfp.jpeg
+lulupfp :: L. Lu :: https://www.instagram.com/luflowrsss/ :: lulupfp.jpeg
+henry :: J. Henry :: https://www.instagram.com/ig_de_henry :: henry.jpeg
+javi :: R. Javi :: https://www.instagram.com/ig_de_javi :: javi.jpeg
