@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyecto — Lyla Alice</title>
+  <meta name="description" content="Detalles del proyecto: misión, visión, retos, propósito y stack." />
+  <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/lylaxtraw" />
+
+  <!-- Fonts: F1 Playfair Display · F2 Space Grotesk · F3 JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500..900;1,500..900&family=Space+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400..800&display=swap" rel="stylesheet" />
+
+  <!-- This page lives in html/, so shared assets are one level up -->
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/project.css" />
+</head>
+
+<body>
+  <canvas id="wave-bg" aria-hidden="true"></canvas>
+
+  <!-- Filled by js/pages/project.js from PROJECTS (js/sections/works.js) -->
+  <main class="project-page" data-project-root hidden>
+    <div class="project-top">
+      <a class="back-link" href="../index.html">&larr; Volver al portfolio</a>
+      <span class="counter" style="font-family:var(--f3);font-size:var(--s3);color:var(--ink-faint)" data-project-counter></span>
+    </div>
+
+    <header class="project-hero">
+      <div>
+        <p class="kicker" data-project-kicker></p>
+        <h1 data-project-title></h1>
+        <p class="tagline" data-project-tagline></p>
+        <a class="cta" data-project-link target="_blank" rel="noopener"></a>
+      </div>
+      <figure class="cover"><img data-project-cover alt="" /></figure>
+    </header>
+
+    <div class="project-sections">
+      <section class="project-card"><h3>Misi&oacute;n</h3><p data-project-mission></p></section>
+      <section class="project-card"><h3>Visi&oacute;n</h3><p data-project-vision></p></section>
+      <section class="project-card wide"><h3>Retos</h3><p data-project-challenges></p></section>
+      <section class="project-card wide"><h3>Prop&oacute;sito</h3><p data-project-purpose></p></section>
+      <section class="project-card wide">
+        <h3>Lenguajes &middot; Disciplinas &middot; Herramientas</h3>
+        <div class="stack-groups">
+          <div><p class="stack-group-label">Lenguajes</p><div class="chips" data-project-languages></div></div>
+          <div><p class="stack-group-label">Disciplinas</p><div class="chips" data-project-disciplines></div></div>
+          <div><p class="stack-group-label">Herramientas</p><div class="chips" data-project-tools></div></div>
+        </div>
+      </section>
+      <section class="project-card wide" data-project-gallery-card>
+        <h3>M&aacute;s del proyecto</h3>
+        <div class="gallery" data-project-gallery></div>
+      </section>
+    </div>
+
+    <nav class="project-nav">
+      <a class="back-link" data-project-prev href="#"></a>
+      <a class="back-link" data-project-next href="#"></a>
+    </nav>
+  </main>
+
+  <!-- Shown when ?p= doesn't match any project -->
+  <div class="not-found" data-project-missing hidden>
+    <h1>404… con estilo</h1>
+    <p>Ese proyecto no existe (todav&iacute;a). Qui&eacute;n sabe, quiz&aacute; est&aacute; en alg&uacute;n branch del multiverso.</p>
+    <a class="cta" href="../index.html">Volver al portfolio</a>
+  </div>
+
+  <!-- Shared -->
+  <script src="../js/shared/utils.js"></script>
+  <script src="../js/shared/wave.js"></script>
+  <!-- PROJECTS data + this page's renderer -->
+  <script src="../js/sections/works.js"></script>
+  <script src="../js/pages/project.js"></script>
+</body>
+</html>

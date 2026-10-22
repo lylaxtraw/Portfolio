@@ -1,0 +1,100 @@
+/* ============================================================
+   base.css — Design tokens + global styles
+   Fonts:  F1 Playfair Display · F2 Space Grotesk · F3 JetBrains Mono
+   Sizes:  S1 (biggest) > S2 > S3
+   ============================================================ */
+
+:root {
+  /* ---- Fonts ---- */
+  --f1: "Playfair Display", Georgia, "Times New Roman", serif;
+  --f2: "Space Grotesk", "Segoe UI", Arial, sans-serif;
+  --f3: "JetBrains Mono", ui-monospace, "Cascadia Mono", Menlo, monospace;
+
+  /* ---- Text sizes: S1 > S2 > S3 ---- */
+  --s1: clamp(2.1rem, 4.6vw, 3.4rem);  /* name, hero titles */
+  --s2: clamp(0.95rem, 1.35vw, 1.12rem); /* intro, synopses, card copy */
+  --s3: 0.78rem;                        /* labels, side notes, chips */
+
+  /* ---- Serious colors (ink on black) ---- */
+  --bg: #050506;
+  --card: #0b0d13;
+  --card-soft: #0f121b;
+  --line: #1d2230;
+  --ink: #e7eaf0;
+  --ink-dim: #a7aebc;
+  --ink-faint: #707887;
+
+  /* ---- App palette (social links) ---- */
+  --app-mail: #ff7a6e;
+  --app-instagram: #e1306c;
+  --app-facebook: #4e8ef7;
+  --app-x: #e8eaed;
+  --app-whatsapp: #25d366;
+  --app-linkedin: #4a9fe8;
+
+  /* ---- Section accents (contrasting colors) ---- */
+  --acc-professional: #22d3ee;
+  --acc-personal: #fb7185;
+  --acc-academic: #fbbf24;
+  --acc-other: #a78bfa;
+  --acc-opinions: #34d399;
+  --acc-random: #fb923c;
+
+  --radius: 14px;
+  --gap: 10px;
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--f2);
+  font-size: var(--s2);
+  line-height: 1.55;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+ul, ol { padding: 0; list-style: none; }
+
+::selection { background: color-mix(in srgb, var(--acc-professional) 40%, transparent); }
+
+/* Scrollbar (subtle, dark) */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: #1d2230; border-radius: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+/* ---- Mouse-reactive background ---- */
+#wave-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ---- Shared utilities ---- */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+.font-f1 { font-family: var(--f1); }
+.font-f2 { font-family: var(--f2); }
+.font-f3 { font-family: var(--f3); }
+
+/* ---- Reduced motion: keep the bg static & calm ---- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

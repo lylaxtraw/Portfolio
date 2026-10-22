@@ -1,0 +1,43 @@
+/* ============================================================
+   random.css — Rows 7-8, cols 8-10: Random
+   ============================================================ */
+
+.panel-random {
+  grid-column: 8 / -1;
+  grid-row: 7 / 9;
+  --accent: var(--acc-random);
+}
+
+@media (max-width: 1100px) {
+  .panel-random { grid-column: 5 / -1; }
+}
+
+@media (max-width: 640px) {
+  .panel-random { grid-column: 1 / -1; grid-row: auto; order: 9; }
+}
+
+/* Dice + rotating fact */
+.dice-btn {
+  align-self: flex-start;
+  font-family: var(--f3);
+  font-size: var(--s3);
+  letter-spacing: 0.06em;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--accent) 50%, var(--line));
+  color: var(--accent);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.dice-btn:hover {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  transform: translateY(-1px);
+}
+
+.random-fact {
+  font-size: 0.9rem;
+  color: var(--ink-dim);
+  font-style: italic;
+  min-height: 3.2em;
+  transition: opacity 0.3s ease;
+}
+.random-fact.fading { opacity: 0; }

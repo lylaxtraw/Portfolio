@@ -1,0 +1,131 @@
+/* ============================================================
+   panels.css — Shared skeleton for the six info panels.
+   Placement + accent color live in each section's own CSS file.
+   ============================================================ */
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 18px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  min-width: 0;
+}
+
+/* Contrasting color per section: a thin top edge + tinted glow */
+.panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), transparent 70%);
+  opacity: 0.9;
+}
+
+/* Title (F3) + small description at the right side */
+.panel-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.panel-head h2 {
+  font-family: var(--f3);      /* F3 */
+  font-size: var(--s2);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.panel-head .side-note {
+  font-family: var(--f2);
+  font-size: var(--s3);
+  color: var(--ink-faint);
+  text-align: right;
+  max-width: 55%;
+}
+
+.panel-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow-y: auto;
+  padding-right: 4px;
+  flex: 1;
+  min-height: 0;
+}
+
+/* ---------------- Panel content blocks ---------------- */
+
+.block .block-label {
+  font-family: var(--f3);
+  font-size: var(--s3);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--accent) 80%, var(--ink));
+  margin-bottom: 5px;
+}
+
+.block .block-text {
+  font-size: var(--s2); /* S2 — card body copy */
+  color: var(--ink-dim);
+  line-height: 1.55;
+}
+
+/* Facts table (label → value) */
+.facts { display: grid; gap: 4px; }
+.facts .fact {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: var(--s3);
+  padding: 3px 0;
+  border-bottom: 1px dashed color-mix(in srgb, var(--accent) 22%, transparent);
+}
+.facts .fact dt { color: var(--ink-faint); }
+.facts .fact dd { color: var(--ink); text-align: right; }
+
+/* Chips */
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  font-family: var(--f2);
+  font-size: var(--s3);
+  padding: 3px 10px;
+  border-radius: 999px;
+  color: var(--ink-dim);
+  border: 1px solid color-mix(in srgb, var(--accent) 38%, var(--line));
+  background: color-mix(in srgb, var(--accent) 9%, transparent);
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.chip:hover {
+  color: var(--ink);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* Links list */
+.links { display: flex; flex-direction: column; gap: 5px; }
+.links.compact { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 12px; }
+.links a {
+  font-size: var(--s3);
+  color: var(--ink-dim);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+.links a::before {
+  content: "→";
+  color: var(--accent);
+  transition: transform 0.2s ease;
+}
+.links a:hover { color: var(--ink); }
+.links a:hover::before { transform: translateX(3px); }
