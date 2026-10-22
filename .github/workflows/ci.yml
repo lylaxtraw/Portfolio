@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main, dev]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: Site checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+
+      - name: Structure, links and content (.md) checks
+        run: python3 .github/scripts/check_site.py
+
+      - name: JavaScript syntax
+        run: |
+          status=0
+          for file in $(git ls-files 'js/**/*.js'); do
+            node --check "$file" || status=1
+          done
+          exit $status
+
+      - name: Smoke test (site is served and data files load)
+        run: |
+          python3 -m http.server 8123 >/dev/null 2>&1 &
+          sleep 2
+          for path in index.html html/project.html public/opinion.md public/social_link.md public/other_links.md; do
+            curl --fail --silent --show-error --output /dev/null "http://localhost:8123/$path"
+          done
