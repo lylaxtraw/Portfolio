@@ -32,7 +32,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
 
       # Publish only what the site needs (no dev/, .github/, docs).
       - name: Assemble site
