@@ -33,11 +33,4 @@ const PERSONAL = {
   ],
 };
 
-(function () {
-  const body = $('[data-section="personal"]');
-  if (!body) return;
-  const panel = body.closest(".panel");
-  panel.querySelector("[data-section-title]").textContent = PERSONAL.title;
-  panel.querySelector("[data-section-note]").textContent = PERSONAL.note;
-  body.innerHTML = PERSONAL.blocks.map(sectionBlockHTML).join("");
-})();
+mountSection("personal", PERSONAL, PERSONAL.blocks);

@@ -24,11 +24,4 @@ const ACADEMIC = {
   ],
 };
 
-(function () {
-  const body = $('[data-section="academic"]');
-  if (!body) return;
-  const panel = body.closest(".panel");
-  panel.querySelector("[data-section-title]").textContent = ACADEMIC.title;
-  panel.querySelector("[data-section-note]").textContent = ACADEMIC.note;
-  body.innerHTML = ACADEMIC.blocks.map(sectionBlockHTML).join("");
-})();
+mountSection("academic", ACADEMIC, ACADEMIC.blocks);

@@ -25,11 +25,4 @@ const PROFESSIONAL = {
   ],
 };
 
-(function () {
-  const body = $('[data-section="professional"]');
-  if (!body) return;
-  const panel = body.closest(".panel");
-  panel.querySelector("[data-section-title]").textContent = PROFESSIONAL.title;
-  panel.querySelector("[data-section-note]").textContent = PROFESSIONAL.note;
-  body.innerHTML = PROFESSIONAL.blocks.map(sectionBlockHTML).join("");
-})();
+mountSection("professional", PROFESSIONAL, PROFESSIONAL.blocks);

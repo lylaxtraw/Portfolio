@@ -23,37 +23,27 @@ const RANDOM = {
   ],
 };
 
-(function () {
+const RANDOM_BLOCKS = [
+  {
+    type: "facts",
+    label: "Users de juegos",
+    facts: RANDOM.gamertags,
+  },
+  ...RANDOM.facts.map((fact) => ({ type: "text", label: "Dado de Lyla", body: fact })),
+];
+
+mountSection("random", RANDOM, RANDOM_BLOCKS, {
+  showIndicators: false,
+  autoRotate: false,
+}).then((carousel) => {
   const body = $('[data-section="random"]');
-  if (!body) return;
-  const panel = body.closest(".panel");
-  panel.querySelector("[data-section-title]").textContent = RANDOM.title;
-  panel.querySelector("[data-section-note]").textContent = RANDOM.note;
-
-  const gamertags = RANDOM.gamertags
-    .map(([k, v, href]) =>
-      href
-        ? `<div class="fact"><dt>${k}</dt><dd><a href="${href}" target="_blank" rel="noopener" style="border-bottom:1px dotted var(--ink-faint)">${v}</a></dd></div>`
-        : `<div class="fact"><dt>${k}</dt><dd>${v}</dd></div>`
-    )
-    .join("");
-
-  body.innerHTML = `
-    <div class="block"><p class="block-label">Users de juegos</p><dl class="facts">${gamertags}</dl></div>
-    <div class="block">
-      <p class="block-label">Dado de Lyla</p>
-      <p class="random-fact" data-fact></p>
-      <button class="dice-btn" data-dice>Tirar el dado</button>
-    </div>`;
-
-  const factEl = $("[data-fact]", body);
-  const roll = () => {
-    factEl.classList.add("fading");
-    setTimeout(() => {
-      factEl.textContent = RANDOM.facts[Math.floor(Math.random() * RANDOM.facts.length)];
-      factEl.classList.remove("fading");
-    }, 300);
-  };
-  $("[data-dice]", body).addEventListener("click", roll);
-  roll();
-})();
+  if (!carousel || !body) return;
+  const dice = document.createElement("button");
+  dice.type = "button";
+  dice.className = "dice-btn";
+  dice.textContent = "Tirar el dado";
+  dice.addEventListener("click", () => {
+    carousel.show(1 + Math.floor(Math.random() * RANDOM.facts.length));
+  });
+  body.insertBefore(dice, $("[data-section-dots]", body));
+});
