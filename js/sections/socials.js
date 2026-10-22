@@ -6,10 +6,10 @@
 
 const SOCIALS = [
   // TODO: replace with your real address.
-  { id: "mail",      label: "Mail",      color: "var(--app-mail)",      href: "mailto:correo@ejemplo.com" },
+  { id: "mail",      label: "Mail",      color: "var(--app-mail)",      href: "mailto:lylaxtraw@gmail.com" },
   { id: "instagram", label: "Instagram", color: "var(--app-instagram)", href: "https://www.instagram.com/lylaxtraw/" },
   { id: "facebook",  label: "Facebook",  color: "var(--app-facebook)",  href: "https://www.facebook.com/lylaxtraw/" },
-  { id: "x",         label: "X",         color: "var(--app-x)",         href: "https://x.com/SalxianPayaxin" },
+  { id: "x",         label: "X",         color: "var(--app-x)",         href: "https://x.com/_CherryStraw_" },
   { id: "whatsapp",  label: "WhatsApp",  color: "var(--app-whatsapp)",  href: "https://wa.me/52282859882" },
   { id: "linkedin",  label: "LinkedIn",  color: "var(--app-linkedin)",  href: "https://www.linkedin.com/in/lylaxtraw" },
 ];
