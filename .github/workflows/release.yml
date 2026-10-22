@@ -1,0 +1,30 @@
+name: Release
+
+# Push a tag like v0.1.0 to publish a release with a downloadable site bundle.
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - run: python3 .github/scripts/check_site.py
+
+      - name: Build bundle
+        run: |
+          zip -r "portfolio-${GITHUB_REF_NAME}.zip" index.html css js html img public
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" "portfolio-${GITHUB_REF_NAME}.zip" \
+            --title "$GITHUB_REF_NAME" \
+            --generate-notes \
+            --verify-tag
