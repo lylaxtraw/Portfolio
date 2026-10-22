@@ -1,0 +1,18 @@
+/* ============================================================
+   other.css — Rows 3-4, cols 8-10: Otros Trabajos
+   ============================================================ */
+
+.panel-other {
+  grid-column: 8 / -1;
+  grid-row: 3 / 5;
+  --accent: var(--acc-other);
+}
+
+/* Medium board (6 columns): right stack keeps 2 columns wide */
+@media (max-width: 1100px) {
+  .panel-other { grid-column: 5 / -1; }
+}
+
+@media (max-width: 640px) {
+  .panel-other { grid-column: 1 / -1; grid-row: auto; order: 5; }
+}

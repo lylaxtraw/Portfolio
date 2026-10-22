@@ -1,0 +1,19 @@
+/* ============================================================
+   professional.css — Rows 3-4, cols 1-3: Info Profesional (CV)
+   ============================================================ */
+
+.panel-professional {
+  grid-column: 1 / 4;
+  grid-row: 3 / 5;
+  --accent: var(--acc-professional);
+}
+
+/* Medium board (6 columns): left stack keeps 2 columns wide */
+@media (max-width: 1100px) {
+  .panel-professional { grid-column: 1 / 3; }
+}
+
+/* Phones: full width, stacked by order */
+@media (max-width: 640px) {
+  .panel-professional { grid-column: 1 / -1; grid-row: auto; order: 4; }
+}

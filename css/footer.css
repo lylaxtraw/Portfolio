@@ -1,0 +1,26 @@
+/* ============================================================
+   footer.css — Rows 9-10 (reserved rows)
+   ============================================================ */
+
+.footer {
+  grid-column: 1 / -1;
+  grid-row: 9 / 11;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 24px;
+  padding: 18px 8px;
+  border-top: 1px solid var(--line);
+  font-family: var(--f3);
+  font-size: var(--s3);
+  color: var(--ink-faint);
+}
+
+.footer a { color: var(--ink-dim); }
+.footer a:hover { color: var(--ink); }
+.footer .future-row { opacity: 0.55; }
+
+@media (max-width: 640px) {
+  .footer { grid-column: 1 / -1; grid-row: auto; order: 10; }
+}

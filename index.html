@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lyla Alice — Portfolio</title>
+  <meta name="description" content="Portfolio de Lyla Alice Estrada Pulido (CherryStraw): backend developer en desarrollo, proyectos, gustos y más." />
+  <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/lylaxtraw" />
+
+  <!-- Fonts: F1 Playfair Display · F2 Space Grotesk · F3 JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500..900;1,500..900&family=Space+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400..800&display=swap" rel="stylesheet" />
+
+  <!-- Shared -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/board.css" />
+  <link rel="stylesheet" href="css/panels.css" />
+  <!-- Sections (one file each — rearrange freely) -->
+  <link rel="stylesheet" href="css/socials.css" />
+  <link rel="stylesheet" href="css/intro.css" />
+  <link rel="stylesheet" href="css/professional.css" />
+  <link rel="stylesheet" href="css/personal.css" />
+  <link rel="stylesheet" href="css/academic.css" />
+  <link rel="stylesheet" href="css/other.css" />
+  <link rel="stylesheet" href="css/opinions.css" />
+  <link rel="stylesheet" href="css/random.css" />
+  <link rel="stylesheet" href="css/works.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+
+<body>
+  <!-- Black background waving towards the mouse -->
+  <canvas id="wave-bg" aria-hidden="true"></canvas>
+
+  <main class="board">
+
+    <!-- ====== Rows 1-2 · Social media (each cell: icon + label below) ====== -->
+    <a class="social-cell mail"      data-social="mail"      aria-label="Mail"></a>
+    <a class="social-cell instagram" data-social="instagram" aria-label="Instagram"></a>
+    <a class="social-cell facebook"  data-social="facebook"  aria-label="Facebook"></a>
+
+    <!-- ====== Rows 1-2 · Name + Photo (cols 4-7) ====== -->
+    <header class="intro">
+      <img class="photo" alt="Foto de Lyla Alice" />
+      <div>
+        <h1 class="name">Lyla Alice</h1>
+        <span class="aka">CherryStraw · lylaxtraw</span>
+      </div>
+      <!-- F2 · S2 · serious colors -->
+      <p class="bio">
+        Electronics Engineer &amp; Backend Developer en desarrollo. Vengo del mundo donde un error
+        quema una placa f&iacute;sica, as&iacute; que me tomo la calidad y el dise&ntilde;o muy en serio.
+        Hoy construyo APIs REST robustas, sitios web y videojuegos.
+        M&aacute;s sobre m&iacute; en <a href="https://github.com/lylaxtraw" target="_blank" rel="noopener">GitHub</a>.
+      </p>
+    </header>
+
+    <a class="social-cell x"        data-social="x"        aria-label="X"></a>
+    <a class="social-cell whatsapp" data-social="whatsapp" aria-label="WhatsApp"></a>
+    <a class="social-cell linkedin" data-social="linkedin" aria-label="LinkedIn"></a>
+
+    <!-- ====== Row 3-4 · Professional Info (cols 1-3) ====== -->
+    <section class="panel panel-professional" aria-labelledby="h-professional">
+      <div class="panel-head">
+        <h2 id="h-professional" data-section-title>Info Profesional</h2>
+        <p class="side-note" data-section-note>Mi CV en modo r&aacute;pido</p>
+      </div>
+      <div class="panel-body" data-section="professional"></div>
+    </section>
+
+    <!-- ====== Row 5-6 · Personal Info (cols 1-3) ====== -->
+    <section class="panel panel-personal" aria-labelledby="h-personal">
+      <div class="panel-head">
+        <h2 id="h-personal" data-section-title>Info Personal</h2>
+        <p class="side-note" data-section-note>Lo que me mueve cuando nadie est&aacute; viendo</p>
+      </div>
+      <div class="panel-body" data-section="personal"></div>
+    </section>
+
+    <!-- ====== Row 7-8 · Academic Info (cols 1-3) ====== -->
+    <section class="panel panel-academic" aria-labelledby="h-academic">
+      <div class="panel-head">
+        <h2 id="h-academic" data-section-title>Info Acad&eacute;mica</h2>
+        <p class="side-note" data-section-note>D&oacute;nde me formo y qu&eacute; he logrado</p>
+      </div>
+      <div class="panel-body" data-section="academic"></div>
+    </section>
+
+    <!-- ====== Rows 3-8 · Works (cols 4-7): rotating showcase ====== -->
+    <section class="works" aria-label="Trabajos y proyectos">
+      <div class="works-head">
+        <h2>Works</h2>
+        <span class="counter" data-counter>01 / 04</span>
+      </div>
+
+      <div class="carousel" data-carousel>
+        <div class="viewport">
+          <div class="track" data-track><!-- slides injected by js/sections/works.js --></div>
+        </div>
+        <button class="arrow prev" data-prev aria-label="Proyecto anterior">
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6" /></svg>
+        </button>
+        <button class="arrow next" data-next aria-label="Siguiente proyecto">
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6" /></svg>
+        </button>
+      </div>
+
+      <div class="dots" data-dots></div>
+
+      <!-- Synopsis: color & font change per project -->
+      <div class="synopsis" data-synopsis>
+        <span class="tagline" data-synopsis-tagline></span>
+        <p class="text" data-synopsis-text></p>
+      </div>
+    </section>
+
+    <!-- ====== Row 3-4 · Other works (cols 8-10) ====== -->
+    <section class="panel panel-other" aria-labelledby="h-other">
+      <div class="panel-head">
+        <h2 id="h-other" data-section-title>Otros Trabajos</h2>
+        <p class="side-note" data-section-note>Papers, playlists y otras especies de obra</p>
+      </div>
+      <div class="panel-body" data-section="other"></div>
+    </section>
+
+    <!-- ====== Row 5-6 · Opinions (cols 8-10): feed with pics + links ====== -->
+    <section class="panel panel-opinions" aria-labelledby="h-opinions">
+      <div class="panel-head">
+        <h2 id="h-opinions" data-section-title>Opiniones</h2>
+        <p class="side-note" data-section-note>Lo que dicen quienes me conocen</p>
+      </div>
+      <div class="panel-body opinions-list" data-section="opinions"></div>
+    </section>
+
+    <!-- ====== Row 7-8 · Random (cols 8-10) ====== -->
+    <section class="panel panel-random" aria-labelledby="h-random">
+      <div class="panel-head">
+        <h2 id="h-random" data-section-title>Random</h2>
+        <p class="side-note" data-section-note>Caja fuerte sin llave</p>
+      </div>
+      <div class="panel-body" data-section="random"></div>
+    </section>
+
+    <!-- ====== Rows 9-10 · Footer (reserved rows) ====== -->
+    <footer class="footer">
+      <span>&copy; 2026 Lyla Alice Estrada Pulido — hecho a mano, sin plantillas</span>
+      <span>
+        <a href="https://github.com/lylaxtraw" target="_blank" rel="noopener">github.com/lylaxtraw</a>
+        &nbsp;·&nbsp;
+        <a href="https://github.com/CherryStraw5337" target="_blank" rel="noopener">CherryStraw5337</a>
+      </span>
+      <span class="future-row">filas 9&ndash;10: reservadas para el futuro</span>
+    </footer>
+
+  </main>
+
+  <!-- Shared -->
+  <script src="js/shared/utils.js"></script>
+  <script src="js/shared/icons.js"></script>
+  <script src="js/shared/wave.js"></script>
+  <!-- Sections (one file each: data + render) -->
+  <script src="js/sections/socials.js"></script>
+  <script src="js/sections/intro.js"></script>
+  <script src="js/sections/professional.js"></script>
+  <script src="js/sections/personal.js"></script>
+  <script src="js/sections/academic.js"></script>
+  <script src="js/sections/other.js"></script>
+  <script src="js/sections/opinions.js"></script>
+  <script src="js/sections/random.js"></script>
+  <script src="js/sections/works.js"></script>
+</body>
+</html>

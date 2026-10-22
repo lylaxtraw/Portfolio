@@ -1,0 +1,157 @@
+/* ============================================================
+   works.css — Rows 3-8, cols 4-7: rotating project showcase
+   ============================================================ */
+
+.works {
+  grid-column: 4 / 8;
+  grid-row: 3 / 9;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  min-width: 0;
+  --accent: var(--acc-professional);
+}
+
+@media (max-width: 1100px) {
+  .works { grid-column: 3 / 5; }
+}
+
+@media (max-width: 640px) {
+  .works { grid-column: 1 / -1; grid-row: auto; order: 3; min-height: 420px; }
+}
+
+/* Head: title + counter */
+.works-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.works-head h2 {
+  font-family: var(--f3);
+  font-size: var(--s2);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.works-head .counter {
+  font-family: var(--f3);
+  font-size: var(--s3);
+  color: var(--ink-faint);
+}
+
+/* Carousel */
+.carousel { position: relative; flex: 1; min-height: 0; }
+
+.carousel .viewport {
+  overflow: hidden;
+  border-radius: 10px;
+  height: 100%;
+  border: 1px solid var(--line);
+  background: var(--card-soft);
+}
+
+.carousel .track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* The photo of the project — clicking it opens the project page */
+.slide {
+  flex: 0 0 100%;
+  display: block;
+  position: relative;
+  height: 100%;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.slide:hover img { transform: scale(1.015); }
+
+.slide .slide-title {
+  position: absolute;
+  left: 14px;
+  bottom: 12px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--bg) 72%, transparent);
+  backdrop-filter: blur(6px);
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  font-family: var(--f3);
+  font-size: var(--s3);
+  letter-spacing: 0.06em;
+  color: var(--ink);
+}
+
+/* Arrows */
+.carousel .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--bg) 78%, transparent);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.carousel .arrow:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-50%) scale(1.06);
+}
+.carousel .arrow.prev { left: 10px; }
+.carousel .arrow.next { right: 10px; }
+.carousel .arrow svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+}
+
+/* Dots */
+.dots { display: flex; justify-content: center; gap: 7px; margin-top: 10px; }
+.dots button {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--line);
+  transition: background 0.25s ease, width 0.25s ease;
+}
+.dots button.active { background: var(--accent); width: 20px; }
+
+/* Synopsis under the carousel: color + font change per project */
+.synopsis {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  background: color-mix(in srgb, var(--accent) 7%, transparent);
+  transition: border-color 0.5s ease, background 0.5s ease, color 0.5s ease;
+}
+.synopsis .tagline {
+  display: block;
+  font-family: var(--f3);
+  font-size: var(--s3);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 4px;
+}
+.synopsis .text {
+  color: var(--accent);
+  font-size: var(--s2);
+  line-height: 1.5;
+}

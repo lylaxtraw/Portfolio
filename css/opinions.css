@@ -1,0 +1,61 @@
+/* ============================================================
+   opinions.css — Rows 5-6, cols 8-10: Opiniones
+   A scrollable feed: every opinion keeps its author's picture
+   and a link to their social media.
+   ============================================================ */
+
+.panel-opinions {
+  grid-column: 8 / -1;
+  grid-row: 5 / 7;
+  --accent: var(--acc-opinions);
+}
+
+@media (max-width: 1100px) {
+  .panel-opinions { grid-column: 5 / -1; }
+}
+
+@media (max-width: 640px) {
+  .panel-opinions { grid-column: 1 / -1; grid-row: auto; order: 7; }
+}
+
+/* The feed itself */
+.opinions-list { gap: 0; }
+
+.opinion {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 9px 2px;
+  border-bottom: 1px dashed color-mix(in srgb, var(--accent) 22%, transparent);
+}
+.opinion:last-child { border-bottom: 0; }
+
+/* Author's picture */
+.opinion-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: 0 0 auto;
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--line));
+}
+
+.opinion-text {
+  font-size: 0.82rem;
+  color: var(--ink);
+  line-height: 1.45;
+  margin-bottom: 3px;
+}
+
+/* Author name → links to their social media */
+.opinion-who {
+  font-family: var(--f3);
+  font-size: var(--s3);
+  color: var(--ink-faint);
+  border-bottom: 1px dotted transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.opinion-who:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
