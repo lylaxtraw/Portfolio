@@ -63,6 +63,63 @@
   min-height: 0;
 }
 
+.section-carousel-slide {
+  flex: 1;
+  min-height: 0;
+}
+
+.section-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.section-carousel-arrow {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--accent);
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.section-carousel-arrow:hover,
+.section-carousel-arrow:focus-visible {
+  border-color: var(--accent);
+}
+
+.section-carousel-counter {
+  color: var(--ink-faint);
+  font-family: var(--f3);
+  font-size: var(--s3);
+}
+
+.section-carousel-dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 3px;
+  max-height: 30px;
+  overflow-y: auto;
+}
+
+.section-carousel-dot {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border-radius: 999px;
+  background: var(--line);
+}
+
+.section-carousel-dot.active {
+  width: 16px;
+  background: var(--accent);
+}
+
 /* ---------------- Panel content blocks ---------------- */
 
 .block .block-label {
