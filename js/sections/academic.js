@@ -9,15 +9,15 @@ const ACADEMIC = {
   blocks: [
     { type: "facts", label: "Formación actual",
       facts: [
-        ["Carrera", "Ingeniería en Instrumentación Electrónica"],
-        ["Universidad", "Universidad Veracruzana"],
-        ["Avance", "Quinto semestre · Bloque II"],
+        ["Carrera", "N/A"],
+        ["Universidad", "N/A"],
+        ["Avance", "N/A"],
       ] },
     { type: "links", label: "Referencias",
       items: [
-        { text: "Ubicación de la Facultad", href: "https://maps.app.goo.gl/Gss3EsRBvBt1WNuy7" },
+        { text: "Ubicación de la Facultad", href: "N/A" },
       ] },
-    { type: "text", label: "En curso",
+    { type: "text", label: "No estudiando",
       body: "Formación continua en desarrollo backend con Python/FastAPI, QA con TDD y arquitectura de software (SOLID, ADRs), manteniendo vivo el músculo de bajo nivel con C y electrónica." },
     { type: "text", label: "Logros recientes",
       body: "SensorHub: sistema completo con 96.85% de cobertura, CI/CD y despliegue en la nube. SlimeSpire: primer videojuego propio en desarrollo activo. Esta misma página: frontend hecho a mano, sin plantillas." },

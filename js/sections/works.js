@@ -13,7 +13,7 @@ const PROJECTS = [
     synopsis: "Backend para dispositivos embebidos en bodegas industriales. Monolito modular en 4 capas (DIP), 96.85% de cobertura con TDD estricto, dockerizado y desplegado con CI/CD.",
     accent: "#38bdf8",
     font: "f3",
-    img: "https://opengraph.githubassets.com/1/CherryStraw5337/Sensorhub-API---CherryStraw",
+    img: "http://github.com/CherryStraw5337/Sensorhub-API---CherryStraw/blob/main/docs/logo.jpg?raw=true",
     link: "https://github.com/CherryStraw5337/Sensorhub-API---CherryStraw",
     linkLabel: "Explorar el código fuente",
     mission: "Resolver un problema real: la corrupción de datos y la ineficiencia energética en dispositivos embebidos en bodegas industriales.",
@@ -57,7 +57,7 @@ const PROJECTS = [
     synopsis: "Un juego que no se toma a sí mismo en serio, pero divierte. Roguelike de combate estratégico en Lua, jugable hasta niveles absurdos (naneinf-esc). En desarrollo activo.",
     accent: "#4ade80",
     font: "f1",
-    img: "https://opengraph.githubassets.com/1/CherryStraw5337/SlimeSpire",
+    img: "https://github.com/CherryStraw5337/SlimeSpire/blob/main/sprites/gif/hurtSlime.gif?raw=true",
     link: "https://github.com/CherryStraw5337/SlimeSpire",
     linkLabel: "Explorar el código fuente",
     mission: "Construir mi primer juego completo: un roguelike de combate estratégico que se pueda escalar hasta niveles ridículos sin romperse.",
@@ -69,7 +69,7 @@ const PROJECTS = [
     tools: ["Lua", "Git", "GitHub"],
     gallery: [
       "https://opengraph.githubassets.com/1/CherryStraw5337/SlimeSpire",
-      "img/coming-soon.svg",
+      "https://github.com/CherryStraw5337/SlimeSpire/blob/main/sprites/logo.png?raw=true",
     ],
   },
   {

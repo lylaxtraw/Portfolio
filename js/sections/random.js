@@ -19,7 +19,9 @@ const RANDOM = {
     "SlimeSpire toma (mucha) inspiración abierta de Balatro.",
     "Un PATCH bien puesto puede salvar ancho de banda, batería y civilizaciones enteras.",
     "Cuando no estoy programando: canto, bailo o ando en bici.",
-    "“Dr Pepper, uhhhhh, no sé.” — R. Javi, filósofo contemporáneo.",
+    "Sabías que el ano humano es capaz de estirarse hasta 10 cm de diámetro? No lo intentes en casa.",
+    "Nunca he tomado ni fumado, simplemente soy mejor.",
+    "Tengo registrado más de un 1 año de juego seguido en Balatro, y más de 2 años en Minecraft.",
   ],
 };
 
