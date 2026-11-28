@@ -9,9 +9,8 @@ const PROFILE = {
   aka: "CherryStraw · lylaxtraw",
   // Small introductory text for the portfolio. May contain HTML.
   intro:
-    "Electronics Engineer &amp; Backend Developer en desarrollo. Vengo del mundo donde un error quema una placa f&iacute;sica, " +
-    "as&iacute; que me tomo la calidad y el dise&ntilde;o muy en serio. Hoy construyo APIs REST robustas, escalables y seguras, " +
-    'sitios web y videojuegos. M&aacute;s de m&iacute; en <a href="https://github.com/lylaxtraw" target="_blank" rel="noopener">GitHub</a>.',
+    "Fullstack Developer & Game Developer en desarrollo " +
+    "<a href='https://github.com/lylaxtraw' target='_blank' rel='noopener'>Perfil Github</a>",
   // Replace with a local photo (e.g. "img/me.jpg"); the GitHub avatar is a stand-in.
   photo: "https://avatars.githubusercontent.com/lylaxtraw",
   github: "https://github.com/lylaxtraw",

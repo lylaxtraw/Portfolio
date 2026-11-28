@@ -9,19 +9,19 @@ const PROJECTS = [
   {
     id: "sensorhub",
     title: "SensorHub API",
-    tagline: "La API de un hub de sensores: fácil de programar, entender y operar",
-    synopsis: "Backend para dispositivos embebidos en bodegas industriales. Monolito modular en 4 capas (DIP), 96.85% de cobertura con TDD estricto, dockerizado y desplegado con CI/CD.",
+    tagline: "API built for embedded devices in industrial warehouses",
+    synopsis: "Backend for embedded devices in industrial warehouses. Modular monolith in 4 layers (DIP), 96.85% coverage with strict TDD, containerized and deployed with CI/CD.",
     accent: "#38bdf8",
     font: "f3",
     img: "http://github.com/CherryStraw5337/Sensorhub-API---CherryStraw/blob/main/docs/logo.jpg?raw=true",
     link: "https://github.com/CherryStraw5337/Sensorhub-API---CherryStraw",
-    linkLabel: "Explorar el código fuente",
-    mission: "Resolver un problema real: la corrupción de datos y la ineficiencia energética en dispositivos embebidos en bodegas industriales.",
-    vision: "Ser una API que cualquier persona pueda programar, entender y operar sin sufrir: contratos claros, calidad medible y cero excusas para no testear.",
-    challenges: "Simular el hardware físico con repositorios fake en memoria RAM; sostener 96.85% de cobertura con TDD estricto; y elegir PATCH sobre PUT (ADR-0002) para no obligar al microcontrolador a enviar payloads masivos solo para actualizar un umbral.",
-    purpose: "Demostrar que el mundo embebido y el backend pueden hablarse con respeto: calidad industrial aplicada a software.",
+    linkLabel: "Explore the source code",
+    mission: "Solve a real problem: data corruption and energy inefficiency in embedded devices in industrial warehouses.",
+    vision: "Be an API that anyone can program, understand and operate without suffering: clear contracts, measurable quality and zero excuses for not testing.",
+    challenges: "Simulate the physical hardware with fake repositories in RAM; maintain 96.85% coverage with strict TDD; and choose PATCH over PUT (ADR-0002) to avoid forcing the microcontroller to send massive payloads just to update a threshold.",
+    purpose: "Demonstrate that the embedded world and backend can speak with respect: industrial quality applied to software.",
     languages: ["Python 3.12+"],
-    disciplines: ["Backend", "QA / TDD", "Arquitectura (DIP)", "DevOps", "IoT"],
+    disciplines: ["Backend", "QA / TDD", "Architecture (DIP)", "DevOps", "IoT"],
     tools: ["FastAPI", "SQLAlchemy 2.0", "Pydantic v2", "Pytest", "Docker", "GitHub Actions", "Trivy", "PostgreSQL", "Render"],
     gallery: [
       "https://opengraph.githubassets.com/1/CherryStraw5337/Sensorhub-API---CherryStraw",
@@ -31,20 +31,20 @@ const PROJECTS = [
   {
     id: "solaris",
     title: "Solaris Monitoring",
-    tagline: "Sistema integral IoT para el monitoreo en tiempo real de celdas fotovoltaicas",
-    synopsis: "Telemetría de hardware conectada por MQTT a un backend en FastAPI para el análisis en tiempo real de celdas fotovoltaicas.",
+    tagline: "Integral IoT system for real-time monitoring of photovoltaic cells",
+    synopsis: "Hardware telemetry connected via MQTT to a FastAPI backend for real-time analysis of photovoltaic cells.",
     accent: "#fbbf24",
     font: "f2",
     img: "https://opengraph.githubassets.com/1/CherryStraw5337/Solaris-Monitoring",
     link: "https://github.com/CherryStraw5337/Solaris-Monitoring",
-    linkLabel: "Explorar el código fuente",
-    mission: "Monitorear en tiempo real la salud y producción de celdas fotovoltaicas, conectando la telemetría del hardware con el análisis del software.",
-    vision: "Un sistema integral de punta a punta donde cada celda reporta su estado y cada dato termina en una decisión útil.",
-    challenges: "Ingesta MQTT confiable, el ruido natural de los sensores físicos y llevar la señal desde el microcontrolador hasta un backend que la sepa escuchar.",
-    purpose: "Llevar mi formación en instrumentación electrónica a un sistema IoT completo: del cable al dashboard.",
+    linkLabel: "Explore the source code",
+    mission: "Monitor in real-time the health and production of photovoltaic cells, connecting the hardware telemetry with the software analysis.",
+    vision: "An integral end-to-end system where each cell reports its status and each piece of data ends in a useful decision.",
+    challenges: "Reliable MQTT ingestion, the natural noise of physical sensors and carrying the signal from the microcontroller to a backend that can listen to it.",
+    purpose: "Bring my training in electronic instrumentation to a complete IoT system: from the cable to the dashboard.",
     languages: ["Python"],
-    disciplines: ["IoT", "Backend", "Telemetría", "Instrumentación"],
-    tools: ["MQTT", "FastAPI", "Docker", "Sensores"],
+    disciplines: ["IoT", "Backend", "Telemetry", "Instrumentation"],
+    tools: ["MQTT", "FastAPI", "Docker", "Sensors", "PostgreSQL", "Grafana", "GitHub Actions"],
     gallery: [
       "https://opengraph.githubassets.com/1/CherryStraw5337/Solaris-Monitoring",
       "img/coming-soon.svg",
@@ -53,19 +53,19 @@ const PROJECTS = [
   {
     id: "slimespire",
     title: "SlimeSpire",
-    tagline: "Mi primer juego: un roguelike de combate estratégico con mucha inspiración de Balatro",
-    synopsis: "Un juego que no se toma a sí mismo en serio, pero divierte. Roguelike de combate estratégico en Lua, jugable hasta niveles absurdos (naneinf-esc). En desarrollo activo.",
+    tagline: "My first game: a strategic combat roguelike with lots of Balatro inspiration",
+    synopsis: "A game that doesn't take itself too seriously, but is fun. A strategic combat roguelike in Lua, playable up to absurd levels (naneinf-esc). In active development.",
     accent: "#4ade80",
     font: "f1",
     img: "https://github.com/CherryStraw5337/SlimeSpire/blob/main/sprites/gif/hurtSlime.gif?raw=true",
     link: "https://github.com/CherryStraw5337/SlimeSpire",
-    linkLabel: "Explorar el código fuente",
-    mission: "Construir mi primer juego completo: un roguelike de combate estratégico que se pueda escalar hasta niveles ridículos sin romperse.",
-    vision: "Un juego honesto consigo mismo: no se toma a sí mismo en serio, pero divierte de verdad. Desarrollado en inglés y creciendo release tras release.",
-    challenges: "Reaprender loops principales, gestión de estados y optimización de recursos: mis raíces de microcontroladores, ahora con la flexibilidad de Lua.",
-    purpose: "Un side-project nacido por el simple gusto de programar.",
+    linkLabel: "Explore the source code",
+    mission: "Build my first complete game: a strategic combat roguelike that can be scaled to absurd levels without breaking.",
+    vision: "A game that is honest with itself: it doesn't take itself too seriously, but is genuinely fun. Developed in English and growing release after release.",
+    challenges: "Relearning main loops, state management and resource optimization: my roots in microcontrollers, now with the flexibility of Lua.",
+    purpose: "A side-project born from the simple pleasure of programming.",
     languages: ["Lua"],
-    disciplines: ["Game Development", "State Management", "Diseño de sistemas"],
+    disciplines: ["Game Development", "State Management", "System Design"],
     tools: ["Lua", "Git", "GitHub"],
     gallery: [
       "https://opengraph.githubassets.com/1/CherryStraw5337/SlimeSpire",
@@ -75,17 +75,17 @@ const PROJECTS = [
   {
     id: "webpage",
     title: "Webpage",
-    tagline: "Mi espacio personal en la web, hecho a mano y sin plantillas",
-    synopsis: "Mi primer frontend construido desde cero para entender el ciclo completo del desarrollo web y tener un rincón propio en internet.",
+    tagline: "My personal space on the web, handcrafted and without templates",
+    synopsis: "My first frontend built from scratch to understand the complete web development cycle and have a own corner on the internet.",
     accent: "#f472b6",
     font: "f2",
     img: "https://opengraph.githubassets.com/1/lylaxtraw/Webpage",
     link: "https://github.com/lylaxtraw/Webpage",
-    linkLabel: "Explorar el código fuente",
-    mission: "Tener un lugar propio donde exponer mis ideas sin depender de plantillas prefabricadas.",
-    vision: "Crecer de “bare bones” a portafolio profesional, iteración tras iteración y con el changelog a la vista.",
-    challenges: "Salir de mi zona de confort natural (el backend, los datos y los electrones) para dominar HTML/CSS puro y el despliegue web con GitHub Pages.",
-    purpose: "Entender el ciclo completo del desarrollo web, del primer <div> al deploy.",
+    linkLabel: "Explore the source code",
+    mission: "Have a own place to expose my ideas without depending on prefabricated templates.",
+    vision: "Grow from “bare bones” to a professional portfolio, iteration after iteration and with the changelog at sight.",
+    challenges: "Step out of my natural comfort zone (the backend, the data and the electrons) to master pure HTML/CSS and web deployment with GitHub Pages.",
+    purpose: "Understand the complete web development cycle, from the first <div> to the deploy.",
     languages: ["HTML", "CSS"],
     disciplines: ["Frontend", "Web Deployment"],
     tools: ["GitHub Pages", "Git"],
@@ -111,13 +111,13 @@ const PROJECTS = [
 
   track.innerHTML = PROJECTS.map(
     (p) => `
-    <a class="slide" href="html/project.html?p=${p.id}" aria-label="Ver proyecto ${p.title}">
+    <a class="slide" href="html/project.html?p=${p.id}" aria-label="See project ${p.title}">
       <img src="${p.img}" alt="Imagen de ${p.title}" loading="lazy" />
       <span class="slide-title">${p.title}</span>
     </a>`
   ).join("");
 
-  dotsEl.innerHTML = PROJECTS.map((_, i) => `<button aria-label="Ir al proyecto ${i + 1}"></button>`).join("");
+  dotsEl.innerHTML = PROJECTS.map((_, i) => `<button aria-label="Go to project ${i + 1}"></button>`).join("");
   const dots = [...dotsEl.children];
 
   let index = 0;
