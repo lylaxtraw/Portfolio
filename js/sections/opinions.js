@@ -5,8 +5,8 @@
    ============================================================ */
 
 const OPINIONS_META = {
-  title: "Opiniones",
-  note: "Lo que dicen quienes me conocen",
+  title: "Opinions",
+  note: "",
 };
 
 // Content lives in public/opinion.md (id :: text) and public/social_link.md
@@ -39,8 +39,8 @@ mountSection("opinions", OPINIONS_META, loadOpinions, {
   const submitButton = document.createElement("button");
   submitButton.type = "button";
   submitButton.className = "opinion-submit";
-  submitButton.textContent = "¡Escribe la tuya! · Próximamente";
-  submitButton.title = "Próximamente podrás enviar tu opinión, red social y foto.";
+  submitButton.textContent = "Write your own! · Próximamente";
+  submitButton.title = "Functionality coming soon.";
   submitButton.disabled = true;
   list.append(submitButton);
 });

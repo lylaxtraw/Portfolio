@@ -5,33 +5,33 @@
 
 const RANDOM = {
   title: "Random",
-  note: "Caja fuerte sin llave",
+  note: "",
   gamertags: [
     ["Discord", "Lylaxtraw5337", null],
     ["Minecraft (Java & Bedrock)", "ElStraw5337", null],
     ["Steam", "Steam Community", "https://steamcommunity.com/profiles/76561199070208628/"],
   ],
   facts: [
-    "Vivo en la Tierra. Por cuestiones de privacidad, no puedo decir cuál es la buena.",
-    "Mi animal favorito es el ajolote leucístico. Búscalo, es gratis y vale la pena.",
-    "He practicado seis deportes: halterofilia, balonmano, taekwondo, fútbol, voleibol y natación.",
-    "Esta página es la sucesora directa de mi antigua Webpage. Si encontrabas sus botones secretos… aquí también hay sorpresas.",
-    "SlimeSpire toma (mucha) inspiración abierta de Balatro.",
-    "Un PATCH bien puesto puede salvar ancho de banda, batería y civilizaciones enteras.",
-    "Cuando no estoy programando: canto, bailo o ando en bici.",
-    "Sabías que el ano humano es capaz de estirarse hasta 10 cm de diámetro? No lo intentes en casa.",
-    "Nunca he tomado ni fumado, simplemente soy mejor.",
-    "Tengo registrado más de un 1 año de juego seguido en Balatro, y más de 2 años en Minecraft.",
+    "I live in Planet Earth. Schocker, I know.",
+    "My favorite animal is the leucistic axolotl. Look it up, it's free and worth it.",
+    "I have practiced six sports: weightlifting, handball, taekwondo, soccer, volleyball and swimming.",
+    "This page is the direct successor of my old Webpage. If you found its secret buttons… there are also surprises here.",
+    "SlimeSpire takes (a lot of) open inspiration from Balatro.",
+    "A well-placed PATCH can save bandwidth, battery and entire civilizations.",
+    "When I'm not programming: I sing, dance or ride a bike.",
+    "Did you know that the human anus is capable of stretching up to 10 cm in diameter? Don't try this at home.",
+    "I have never smoked or drunk, I'm just better.",
+    "I have registered over a year of continuous gameplay in Balatro, and over two years in Minecraft.",
   ],
 };
 
 const RANDOM_BLOCKS = [
   {
     type: "facts",
-    label: "Users de juegos",
+    label: "Game Users",
     facts: RANDOM.gamertags,
   },
-  ...RANDOM.facts.map((fact) => ({ type: "text", label: "Dado de Lyla", body: fact })),
+  ...RANDOM.facts.map((fact) => ({ type: "text", label: "Lyla's Dice", body: fact })),
 ];
 
 mountSection("random", RANDOM, RANDOM_BLOCKS, {
@@ -43,7 +43,7 @@ mountSection("random", RANDOM, RANDOM_BLOCKS, {
   const dice = document.createElement("button");
   dice.type = "button";
   dice.className = "dice-btn";
-  dice.textContent = "Tirar el dado";
+  dice.textContent = "Roll the dice!";
   dice.addEventListener("click", () => {
     carousel.show(1 + Math.floor(Math.random() * RANDOM.facts.length));
   });

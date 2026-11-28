@@ -4,23 +4,23 @@
    ============================================================ */
 
 const ACADEMIC = {
-  title: "Info Académica",
-  note: "Dónde me formo y qué he logrado",
+  title: "Scholar Work & Formation",
+  note: "",
   blocks: [
-    { type: "facts", label: "Formación actual",
+    { type: "facts", label: "Current Studies",
       facts: [
-        ["Carrera", "N/A"],
-        ["Universidad", "N/A"],
-        ["Avance", "N/A"],
+        ["Career", "N/A"],
+        ["University", "N/A"],
+        ["Progress", "N/A"],
       ] },
-    { type: "links", label: "Referencias",
+    { type: "links", label: "References",
       items: [
-        { text: "Ubicación de la Facultad", href: "N/A" },
+        { text: "Faculty Location", href: "N/A" },
       ] },
-    { type: "text", label: "No estudiando",
-      body: "Formación continua en desarrollo backend con Python/FastAPI, QA con TDD y arquitectura de software (SOLID, ADRs), manteniendo vivo el músculo de bajo nivel con C y electrónica." },
-    { type: "text", label: "Logros recientes",
-      body: "SensorHub: sistema completo con 96.85% de cobertura, CI/CD y despliegue en la nube. SlimeSpire: primer videojuego propio en desarrollo activo. Esta misma página: frontend hecho a mano, sin plantillas." },
+    { type: "text", label: "Not Studying",
+      body: "Continuous formation in backend development with Python/FastAPI, QA with TDD and software architecture (SOLID, ADRs), keeping the low-level muscle alive with C and electronics." },
+    { type: "text", label: "Recent Achievements",
+      body: "SensorHub: complete system with 96.85% coverage, CI/CD and cloud deployment. SlimeSpire: first own video game in active development. This very page: handcrafted frontend, no templates." },
   ],
 };
 

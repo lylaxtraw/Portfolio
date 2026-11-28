@@ -4,8 +4,8 @@
    ============================================================ */
 
 const OTHER_META = {
-  title: "Otros Trabajos",
-  note: "Papers, playlists y otras especies de obra",
+  title: "Other Work",
+  note: "",
 };
 
 // To add a group: add it here, then use its key in public/other_links.md.
