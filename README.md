@@ -1,7 +1,5 @@
 # Portfolio
 
-[![CI](https://github.com/lylaxtraw/Portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/lylaxtraw/Portfolio/actions/workflows/ci.yml)
-[![Deploy](https://github.com/lylaxtraw/Portfolio/actions/workflows/pages.yml/badge.svg)](https://github.com/lylaxtraw/Portfolio/actions/workflows/pages.yml)
 [![Live site](https://img.shields.io/badge/live-lylaxtraw.github.io%2FPortfolio-blue)](https://lylaxtraw.github.io/Portfolio/)
 [![Release](https://img.shields.io/github/v/release/lylaxtraw/Portfolio?include_prereleases)](https://github.com/lylaxtraw/Portfolio/releases)
 [![License: MIT](https://img.shields.io/github/license/lylaxtraw/Portfolio)](LICENSE)
@@ -32,7 +30,7 @@ js/sections/      one script per section
 js/shared/        shared helpers (carousel, block registry, .md loader)
 public/           content as Markdown rows: opinions, social links, other links
 img/              images and profile pictures
-.github/          CI, Pages deploy, release workflow, templates
+.github/          local checks, pull request and issue templates
 ```
 
 ## Editing content
@@ -54,15 +52,19 @@ python3 .github/scripts/check_site.py
 ```
 
 Verifies that the root is index-only, local links and images exist, the `.md` rows are well formed and
-consistent, and CSS `url()` files exist. CI also runs `node --check` on every script and a server smoke test.
+consistent, and CSS `url()` files exist. This check runs locally; it does not require GitHub Actions.
 
 ## Deploy and releases
 
-- Pushing to `main` runs the checks and deploys to GitHub Pages.
-- Pushing a tag such as `v0.1.0` publishes a GitHub release with a zip of the site.
-- Day-to-day work happens on `dev`; CI runs on both branches.
+- Publish from **Settings → Pages → Build and deployment → Deploy from a branch**; select `main` and `/(root)`.
+- GitHub Pages then updates from the branch without a repository Actions workflow.
+- To make a release, create a zip locally and upload it using **Releases → Draft a new release**:
 
-One-time setup: **Settings → Pages → Source: GitHub Actions**.
+  ```bash
+  zip -r portfolio-v0.1.0.zip index.html css js html img public
+  ```
+
+- Day-to-day work can continue on `dev`; merge changes into `main` to publish them.
 
 See [CHANGELOG.md](CHANGELOG.md) for what's new.
 
